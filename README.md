@@ -15,8 +15,14 @@
 - 若手动上传：直接拖拽该文件夹内容。
 
 ## Vercel
+<<<<<<< HEAD
 - 使用网页导入：`https://vercel.com/new/import?s=<你的Git仓库URL>`，Root Directory 选 `fireworks-2026`。
 - 或安装 CLI 并登录：`npm i -g vercel && vercel login`，在本目录运行：`vercel --prod`。
+=======
+- 安装并登录 CLI：`npm i -g vercel && vercel login`
+- 在本目录运行：`vercel` 或 `vercel --prod`。
+- 或使用网页导入：`https://vercel.com/new/import?s=<你的Git仓库URL>`，Root Directory 选 `fireworks-2026`。
+>>>>>>> e7ab3da (feat: fireworks 2026 + deploy configs)
 - 成功后会得到形如 `https://fireworks-2026-<hash>.vercel.app/` 的公网地址。
 
 ## Cloudflare Pages（CLI 方式）
