@@ -1,0 +1,2 @@
+
+d78f5bd92fb8000b5a0bb36bfca2e1e288c137a3	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz","integrity":"sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==","time":1767344597353,"size":6355,"metadata":{"time":1767344597340,"url":"https://bnpm.byted.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

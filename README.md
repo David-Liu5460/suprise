@@ -4,6 +4,19 @@
 # Fireworks 2026 Deploy
 
 ## GitHub Pages
+- 安装 Wrangler：`npm i -g wrangler`
+- 登录：`wrangler login`
+- 发布：`wrangler pages publish . --project-name fireworks-2026`
+- 已提供配置：[wrangler.toml](./wrangler.toml)
+- 成功后会得到形如 `https://fireworks-2026.pages.dev/` 的公网地址。
+
+## Fly.io（Docker 方式）
+- 安装并登录：`flyctl auth signup && flyctl auth login`
+- 初始化应用：`flyctl apps create fireworks-2026`
+- 部署：`flyctl launch --no-deploy && flyctl deploy`
+- 已提供配置：[fly.toml](./fly.toml) 与 [Dockerfile](./Dockerfile)
+- 部署成功后会得到形如 `https://fireworks-2026.fly.dev/` 的公网地址。
+## GitHub Pages
 - 初始化 Git 仓库并推送到 GitHub：
   - `git init`
   - `git add . && git commit -m "init fireworks"`
@@ -20,6 +33,8 @@
 ## Vercel
 - 安装并登录 CLI：`npm i -g vercel && vercel login`
 - 在本目录运行：`vercel` 或 `vercel --prod`。
+- 已提供配置：[vercel.json](./vercel.json)
+- 成功后会得到形如 `https://fireworks-2026-<hash>.vercel.app/` 的公网地址。
 
 ## Docker
 - 构建镜像：`docker build -t fireworks-2026 .`

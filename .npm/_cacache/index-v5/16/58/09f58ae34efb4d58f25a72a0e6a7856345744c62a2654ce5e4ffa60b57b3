@@ -1,0 +1,2 @@
+
+50808ab47f18f16cdfae65523a033d19b4549350	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/python/-/python-6.1.5.tgz","integrity":"sha512-qbD48/B3sU7Ok/2T6Cd4hjOdlwewO0S1Lwp2wS59jdl5ne8E+9fwQZ4W4GWVytsK4o3cDz4siYDh5XrnMxCV6w==","time":1767344598501,"size":77954,"metadata":{"time":1767344598493,"url":"https://bnpm.byted.org/@vercel/python/-/python-6.1.5.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

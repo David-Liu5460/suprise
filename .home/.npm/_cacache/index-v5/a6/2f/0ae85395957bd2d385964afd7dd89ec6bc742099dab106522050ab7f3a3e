@@ -1,0 +1,2 @@
+
+e906759f759b7876db2561f1d7981479c47aa99f	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/safer-buffer/-/safer-buffer-2.1.2.tgz","integrity":"sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==","time":1767344714087,"size":12035,"metadata":{"time":1767344714054,"url":"https://bnpm.byted.org/safer-buffer/-/safer-buffer-2.1.2.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

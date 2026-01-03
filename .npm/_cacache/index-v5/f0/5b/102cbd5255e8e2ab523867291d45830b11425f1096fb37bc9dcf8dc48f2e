@@ -1,0 +1,2 @@
+
+27e7b7cb01785c0d3de205e6e90894b642a9d1be	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/punycode/-/punycode-2.3.1.tgz","integrity":"sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==","time":1767344596925,"size":7603,"metadata":{"time":1767344596900,"url":"https://bnpm.byted.org/punycode/-/punycode-2.3.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:16 GMT"},"options":{"compress":true}}}

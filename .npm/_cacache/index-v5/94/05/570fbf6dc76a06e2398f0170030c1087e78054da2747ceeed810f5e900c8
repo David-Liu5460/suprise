@@ -1,0 +1,2 @@
+
+be949ed043cc98be55498cb3da753140e682decc	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@sinclair/typebox/-/typebox-0.25.24.tgz","integrity":"sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==","time":1767344597820,"size":46594,"metadata":{"time":1767344597610,"url":"https://bnpm.byted.org/@sinclair/typebox/-/typebox-0.25.24.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

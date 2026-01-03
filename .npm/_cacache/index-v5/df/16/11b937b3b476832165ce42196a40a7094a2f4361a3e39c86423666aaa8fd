@@ -1,0 +1,2 @@
+
+7059c65025ae921189e908f6429b006b0de270f2	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/next/-/next-4.15.9.tgz","integrity":"sha512-L1bQTxyCnGhWXafQ5xGgOvhAfGZbh5AVro0yOvAHf5Y3plGktR/psudEbbKyEeCszttVHWgdGwKYiVu+0nO40g==","time":1767344598499,"size":154137,"metadata":{"time":1767344598466,"url":"https://bnpm.byted.org/@vercel/next/-/next-4.15.9.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

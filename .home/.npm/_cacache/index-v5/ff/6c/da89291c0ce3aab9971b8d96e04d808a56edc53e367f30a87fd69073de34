@@ -1,0 +1,2 @@
+
+a8b6e9bdf9688e62c4b419a92ad4748cbc47b1ab	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/http-errors/-/http-errors-1.7.3.tgz","integrity":"sha512-ZTTX0MWrsQ2ZAhA1cejAwDLycFsd7I7nVtnkT3Ol0aqodaKW+0CTZDQ1uBv5whptCnc8e8HeRRJxRs0kmm/Qfw==","time":1767344715033,"size":5908,"metadata":{"time":1767344715022,"url":"https://bnpm.byted.org/http-errors/-/http-errors-1.7.3.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:15 GMT"},"options":{"compress":true}}}

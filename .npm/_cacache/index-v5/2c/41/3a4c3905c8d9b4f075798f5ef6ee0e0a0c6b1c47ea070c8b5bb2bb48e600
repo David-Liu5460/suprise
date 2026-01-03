@@ -1,0 +1,2 @@
+
+17732709e7e4a6f97c2565884183e096e08d6376	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/fastify/-/fastify-0.1.18.tgz","integrity":"sha512-oUg7KtKwtVjmGZozVlNXnHJewOzQPIJ+4xji81oznD8Vp7FER6lWDdyZnX9RdxZsJS561yiK9C3/wG0QLXWVCg==","time":1767344598612,"size":5558,"metadata":{"time":1767344598582,"url":"https://bnpm.byted.org/@vercel/fastify/-/fastify-0.1.18.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

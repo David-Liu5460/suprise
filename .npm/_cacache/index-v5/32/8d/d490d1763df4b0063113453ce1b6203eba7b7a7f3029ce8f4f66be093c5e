@@ -1,0 +1,2 @@
+
+830d397628646eff44ec6639d5bdefe901a98047	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/human-signals/-/human-signals-2.1.0.tgz","integrity":"sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==","time":1767344598687,"size":12287,"metadata":{"time":1767344598679,"url":"https://bnpm.byted.org/human-signals/-/human-signals-2.1.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

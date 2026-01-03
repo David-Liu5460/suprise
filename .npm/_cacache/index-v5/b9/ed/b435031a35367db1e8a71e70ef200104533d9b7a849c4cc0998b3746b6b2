@@ -1,0 +1,2 @@
+
+fbfb884e2b6895f908f946b039464d3ccebdb17f	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz","integrity":"sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==","time":1767344597032,"size":6586,"metadata":{"time":1767344597020,"url":"https://bnpm.byted.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

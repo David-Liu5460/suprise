@@ -1,0 +1,2 @@
+
+ca659652c8de99bac9dcdf615afad1be563e146b	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/remix-builder/-/remix-builder-5.5.6.tgz","integrity":"sha512-7NG5OCyM3Hki1GYjLMv3LTusRR1oXNriW9Ux58kvmTmcXQFXAUzth1V3FuZRuxyn+f70io7AN2TRDAAwaAlfIA==","time":1767344598391,"size":57710,"metadata":{"time":1767344598378,"url":"https://bnpm.byted.org/@vercel/remix-builder/-/remix-builder-5.5.6.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

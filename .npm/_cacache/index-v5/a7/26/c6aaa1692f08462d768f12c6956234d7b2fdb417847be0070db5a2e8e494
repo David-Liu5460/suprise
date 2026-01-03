@@ -1,0 +1,2 @@
+
+b3800a8865cc12a67080abcad66dd6e86a760c5a	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/events-intercept/-/events-intercept-2.0.0.tgz","integrity":"sha512-blk1va0zol9QOrdZt0rFXo5KMkNPVSp92Eju/Qz8THwKWKRKeE0T8Br/1aW6+Edkyq9xHYgYxn2QtOnUKPUp+Q==","time":1767344596887,"size":6884,"metadata":{"time":1767344596835,"url":"https://bnpm.byted.org/events-intercept/-/events-intercept-2.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:16 GMT"},"options":{"compress":true}}}

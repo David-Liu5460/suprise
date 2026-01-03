@@ -1,0 +1,2 @@
+
+5c08c1da64c724e132d745ae4526738099428a44	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/shebang-regex/-/shebang-regex-3.0.0.tgz","integrity":"sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==","time":1767344597143,"size":1503,"metadata":{"time":1767344597136,"url":"https://bnpm.byted.org/shebang-regex/-/shebang-regex-3.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

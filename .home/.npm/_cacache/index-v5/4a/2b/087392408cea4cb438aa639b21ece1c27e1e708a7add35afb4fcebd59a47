@@ -1,0 +1,2 @@
+
+6936b3890147fa7ec1b52d5d3d81ea1bb3101d0a	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/minizlib/-/minizlib-2.1.2.tgz","integrity":"sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==","time":1767344713997,"size":6154,"metadata":{"time":1767344713957,"url":"https://bnpm.byted.org/minizlib/-/minizlib-2.1.2.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

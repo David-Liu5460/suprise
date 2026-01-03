@@ -1,0 +1,2 @@
+
+df4d1aa473e0cb3d16f8bda085399577fd7b60e1	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/mri/-/mri-1.2.0.tgz","integrity":"sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==","time":1767344714346,"size":4448,"metadata":{"time":1767344714321,"url":"https://bnpm.byted.org/mri/-/mri-1.2.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

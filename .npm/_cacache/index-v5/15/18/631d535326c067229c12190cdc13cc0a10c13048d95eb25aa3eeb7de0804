@@ -1,0 +1,2 @@
+
+51ecad787d2315c8ddf105eb49e665e3cffbcd3a	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/hono/-/hono-0.2.18.tgz","integrity":"sha512-OZ2yOcdKShSAZolmM8ALxABcCIAIK3GxraW69p7Kvs9yigXnDE2U/+sudIwAaT+fi2DfvkTDvH0Lltm1emskXg==","time":1767344598425,"size":7313,"metadata":{"time":1767344598421,"url":"https://bnpm.byted.org/@vercel/hono/-/hono-0.2.18.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

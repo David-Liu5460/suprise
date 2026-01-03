@@ -1,0 +1,2 @@
+
+2ecd0515d2e60a808165d86e5db5b647e40b9086	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/nestjs/-/nestjs-0.2.19.tgz","integrity":"sha512-Fy/7TjPLZOptkpA66Cp6sulzTNEh6NPeLPXrjAThB8utRCoFDT1gWQQUALz/6y886wor2cPnj4kFHqjKreO38Q==","time":1767344715050,"size":5570,"metadata":{"time":1767344715032,"url":"https://bnpm.byted.org/@vercel/nestjs/-/nestjs-0.2.19.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:15 GMT"},"options":{"compress":true}}}

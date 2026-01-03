@@ -1,0 +1,2 @@
+
+1558f75be356b5fe3b78379a7546ff04202cf00a	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/ruby/-/ruby-2.2.4.tgz","integrity":"sha512-E7V8kUk/pgLT7ZmqyrZWShxaCHc73Cga4pwcW+jcvMAS4kj5niAaz1HquT5sIbq4onKvmHmB1dDEXE7IKAWsjA==","time":1767344598393,"size":54701,"metadata":{"time":1767344598383,"url":"https://bnpm.byted.org/@vercel/ruby/-/ruby-2.2.4.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

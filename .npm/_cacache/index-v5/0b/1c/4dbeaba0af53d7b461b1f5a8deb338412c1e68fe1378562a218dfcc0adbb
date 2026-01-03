@@ -1,0 +1,2 @@
+
+f9aeb28d0f7dd62904eb9c5ed56c617636d5105c	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/json-schema-to-ts/-/json-schema-to-ts-1.6.4.tgz","integrity":"sha512-pR4yQ9DHz6itqswtHCm26mw45FSNfQ9rEQjosaZErhn5J3J2sIViQiz8rDaezjKAhFGpmsoczYVBgGHzFw/stA==","time":1767344597597,"size":18652,"metadata":{"time":1767344597590,"url":"https://bnpm.byted.org/json-schema-to-ts/-/json-schema-to-ts-1.6.4.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

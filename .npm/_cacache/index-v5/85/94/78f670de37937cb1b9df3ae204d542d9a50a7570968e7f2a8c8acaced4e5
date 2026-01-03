@@ -1,0 +1,2 @@
+
+c67db75e5d82dc4f9be947de888a671d82791991	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/code-block-writer/-/code-block-writer-10.1.1.tgz","integrity":"sha512-67ueh2IRGst/51p0n6FvPrnRjAGHY5F8xdjkgrYE7DDzpJe6qA07RYQ9VcoUeo5ATOjSOiWpSL3SWBRRbempMw==","time":1767344597111,"size":13315,"metadata":{"time":1767344597096,"url":"https://bnpm.byted.org/code-block-writer/-/code-block-writer-10.1.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

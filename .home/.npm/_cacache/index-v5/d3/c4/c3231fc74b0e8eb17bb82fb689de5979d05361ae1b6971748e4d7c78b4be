@@ -1,0 +1,2 @@
+
+3154fa5364ed10c2d632aaeb082ec4b5cf698d5b	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/convert-hrtime/-/convert-hrtime-3.0.0.tgz","integrity":"sha512-7V+KqSvMiHp8yWDuwfww06XleMWVVB9b9tURBx+G7UTADuo5hYPuowKloz4OzOqbPezxgo+fdQ1522WzPG4OeA==","time":1767344713997,"size":1651,"metadata":{"time":1767344713960,"url":"https://bnpm.byted.org/convert-hrtime/-/convert-hrtime-3.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

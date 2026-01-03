@@ -1,0 +1,2 @@
+
+c2c943f8a449002ff3d58faae4d8f317d8196f32	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/fsevents/-/fsevents-2.3.3.tgz","integrity":"sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==","time":1767344713803,"size":22808,"metadata":{"time":1767344713798,"url":"https://bnpm.byted.org/fsevents/-/fsevents-2.3.3.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:13 GMT"},"options":{"compress":true}}}

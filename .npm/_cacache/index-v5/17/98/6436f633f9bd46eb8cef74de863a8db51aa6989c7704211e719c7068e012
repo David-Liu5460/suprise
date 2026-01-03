@@ -1,0 +1,2 @@
+
+3c930b9b9841c530a533e66620fcce173f6aca59	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/zod/-/zod-3.22.4.tgz","integrity":"sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==","time":1767344598193,"size":107570,"metadata":{"time":1767344598179,"url":"https://bnpm.byted.org/zod/-/zod-3.22.4.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

@@ -1,7 +1,7 @@
 name: Deploy to GitHub Pages
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "fireworks-2026"]
 permissions:
   contents: read
   pages: write
@@ -17,7 +17,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: fireworks-2026
   deploy:
     environment:
       name: github-pages

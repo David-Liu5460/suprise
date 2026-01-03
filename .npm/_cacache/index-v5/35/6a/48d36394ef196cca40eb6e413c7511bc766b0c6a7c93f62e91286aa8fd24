@@ -1,0 +1,2 @@
+
+0a0eaad9db34208451bd33447a5ce22eab3140eb	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@edge-runtime/primitives/-/primitives-4.1.0.tgz","integrity":"sha512-Vw0lbJ2lvRUqc7/soqygUX216Xb8T3WBZ987oywz6aJqRxcwSVWwr9e+Nqo2m9bxobA9mdbWNNoRY6S9eko1EQ==","time":1767344598164,"size":163015,"metadata":{"time":1767344598011,"url":"https://bnpm.byted.org/@edge-runtime/primitives/-/primitives-4.1.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

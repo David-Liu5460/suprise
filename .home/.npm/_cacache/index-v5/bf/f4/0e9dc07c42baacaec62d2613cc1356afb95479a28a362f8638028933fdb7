@@ -1,0 +1,2 @@
+
+f05386a66ea4f00379c537849daa75c87a4f4cc3	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/is-node-process/-/is-node-process-1.2.0.tgz","integrity":"sha512-Vg4o6/fqPxIjtxgUH5QLJhwZ7gW5diGCVlXpuUfELC62CuxM1iHcRe51f2W1FDy04Ai4KJkagKjx3XaqyfRKXw==","time":1767344714716,"size":2199,"metadata":{"time":1767344714689,"url":"https://bnpm.byted.org/is-node-process/-/is-node-process-1.2.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

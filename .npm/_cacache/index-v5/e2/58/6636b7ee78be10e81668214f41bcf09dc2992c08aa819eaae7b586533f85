@@ -1,0 +1,2 @@
+
+7f37299dcfd6ba5c3e7ea6d44efbf25afbbef2f4	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.9.tgz","integrity":"sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==","time":1767344596937,"size":21014,"metadata":{"time":1767344596922,"url":"https://bnpm.byted.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.9.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:16 GMT"},"options":{"compress":true}}}

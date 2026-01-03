@@ -1,0 +1,2 @@
+
+efd59b3f09d5744869d4196db3c724654adbae27	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/zod","integrity":"sha512-P1Ns7BAq5pzLZXBMHAQW+Ji6PdPr5u0x8wh/6yfbJTjSGwD1BNRtOUa6ILWH8uD/rLAD2h79SvY813LNMHyB+A==","time":1767344585097,"size":3455482,"metadata":{"time":1767344584952,"url":"https://bnpm.byted.org/zod","reqHeaders":{"accept":"application/json"},"resHeaders":{"cache-control":"max-age=300, public","content-type":"application/json","date":"Fri, 02 Jan 2026 09:03:04 GMT","etag":"W/7d264cf1afaa73b4c860d202a36a7ebc8c113ca4"},"options":{"compress":true}}}

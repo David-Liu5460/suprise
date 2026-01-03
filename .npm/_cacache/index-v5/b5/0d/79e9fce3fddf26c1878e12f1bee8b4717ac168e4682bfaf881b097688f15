@@ -1,0 +1,2 @@
+
+a04b39503cfa31f88ee86e0919608eb45ebdbeb7	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/elysia/-/elysia-0.1.15.tgz","integrity":"sha512-5XIV3yPRUZSbzJeSrBKSsc3h5AJlhAQ1D39X41oyi/2FF/dAb2rcH921ETYUqRmojbrH4ZKPqmpLbs/Qrv7BeQ==","time":1767344598585,"size":5666,"metadata":{"time":1767344598575,"url":"https://bnpm.byted.org/@vercel/elysia/-/elysia-0.1.15.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

@@ -1,0 +1,2 @@
+
+652c29789f51f24acc7fa13a4fc25bb65f4c904e	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/undici","integrity":"sha512-H9dQpLLkGm3yDiOnv75YvTPUbi0hcHClFeO+XnDNIRA6HImvlpjUtmSl7GsMItUiNcAhmdhzjA+tZJCqzTQCJA==","time":1767344697996,"size":1191022,"metadata":{"time":1767344697645,"url":"https://bnpm.byted.org/undici","reqHeaders":{"accept":"application/json"},"resHeaders":{"cache-control":"max-age=300, public","content-type":"application/json","date":"Fri, 02 Jan 2026 09:04:57 GMT","etag":"W/6c87ee8e578a6faeceb4a9f870f7017964914514"},"options":{"compress":true}}}

@@ -1,0 +1,2 @@
+
+f5630ef4c10772ac802a2b9a9a39ce67174ca99c	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.1.1.tgz","integrity":"sha512-p64ah1M1ld8xjWv3qbvFwHiFVWrq1yFvV4f7w+mzaqiR4IlSgkqhcRdHwsGgomwzBH51sRY4NEowLxnaBjcW/A==","time":1767344597215,"size":591433,"metadata":{"time":1767344597179,"url":"https://bnpm.byted.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.1.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

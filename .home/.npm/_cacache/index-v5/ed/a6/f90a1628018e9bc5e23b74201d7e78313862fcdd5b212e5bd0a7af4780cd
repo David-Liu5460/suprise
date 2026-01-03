@@ -1,0 +1,2 @@
+
+39b2075ba72dcd79b1e06e6e83b11ef92ef125b3	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/strip-final-newline/-/strip-final-newline-2.0.0.tgz","integrity":"sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==","time":1767344714297,"size":1704,"metadata":{"time":1767344714259,"url":"https://bnpm.byted.org/strip-final-newline/-/strip-final-newline-2.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

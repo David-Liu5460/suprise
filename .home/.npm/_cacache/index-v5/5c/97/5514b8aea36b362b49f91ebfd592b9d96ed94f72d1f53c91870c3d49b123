@@ -1,0 +1,2 @@
+
+b91cde86b3532aa9e61f12be63dd154631ecfb62	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz","integrity":"sha512-NqADB8VjPFLM2V0VvHUewwwsw0ZWBaIdgo+ieHtK3hasLz4qeCRjYcqfB6AQrBggRKppKF8L52/VqdVsO47Dlw==","time":1767344714246,"size":6465,"metadata":{"time":1767344714205,"url":"https://bnpm.byted.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

@@ -1,0 +1,2 @@
+
+4ce361c4631264e859b9898c0da2484803d94816	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/throttleit/-/throttleit-2.1.0.tgz","integrity":"sha512-nt6AMGKW1p/70DF/hGBdJB57B8Tspmbp5gfJ8ilhLnt7kkr2ye7hzD6NVG8GGErk2HWF34igrL2CXmNIkzKqKw==","time":1767344714721,"size":2250,"metadata":{"time":1767344714699,"url":"https://bnpm.byted.org/throttleit/-/throttleit-2.1.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}
