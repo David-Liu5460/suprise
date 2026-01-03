@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Fireworks 2026 Deploy
 
 ## GitHub Pages
@@ -37,3 +38,6 @@
 - 构建镜像：`docker build -t fireworks-2026 .`
 - 运行：`docker run -p 8080:80 fireworks-2026`
 - 访问：`http://localhost:8080`
+=======
+# suprise
+>>>>>>> de60905 (Initial commit)
