@@ -9,6 +9,19 @@
   <body>
     <canvas id="stage"></canvas>
     <div id="year">2026</div>
+    <audio id="bg-audio" src="./mp3/downloads_mureka_114469133025281_印迹_4751_cut_03m50s_320kbps.mp3" preload="auto"></audio>
     <script src="./script.js"></script>
+    <script>
+      (function(){
+        var a=document.getElementById('bg-audio');
+        function p(){a&&a.play().catch(function(){});} 
+        if(document.readyState==='complete'||document.readyState==='interactive'){p();}
+        else{document.addEventListener('DOMContentLoaded',p);} 
+        function once(){p();window.removeEventListener('click',once);window.removeEventListener('touchstart',once);window.removeEventListener('keydown',once);} 
+        window.addEventListener('click',once);
+        window.addEventListener('touchstart',once,{passive:true});
+        window.addEventListener('keydown',once);
+      })();
+    </script>
   </body>
   </html>
