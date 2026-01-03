@@ -75,24 +75,29 @@ function getTextPoints(text, fontSize) {
 }
 
 function explode(x, y, hue) {
-  const count = 100
-  const showText = Math.random() < 0.6
-  let textPts = null
+  const showText = Math.random() < 0.8
   if (showText) {
     const text = phrases[Math.floor(rand(0, phrases.length))]
-    const fs = Math.floor(Math.min(48, Math.max(28, Math.min(w, h) * 0.06)))
-    textPts = getTextPoints(text, fs)
-  }
-  for (let i = 0; i < count; i++) {
-    if (textPts && Math.random() < 0.8) {
-      const pidx = Math.floor(rand(0, textPts.length))
-      const tp = textPts[pidx]
+    const fs = Math.floor(Math.min(60, Math.max(32, Math.min(w, h) * 0.08)))
+    const textPts = getTextPoints(text, fs)
+    const step = 2 
+    for (let i = 0; i < textPts.length; i += step) {
+      const tp = textPts[i]
       const spd = rand(0.4, 1.0)
-      const size = rand(1.2, 2.0)
+      const size = rand(1.2, 2.2)
       const sat = rand(70, 100)
-      const light = rand(55, 75)
-      particles.push({ x, y, vx: Math.cos(rand(0, Math.PI * 2)) * spd, vy: Math.sin(rand(0, Math.PI * 2)) * spd, alpha: 0.9, fade: 0.0, size, hue, sat, light, type: 'text', tx: x + tp.x, ty: y + tp.y, arrived: false })
-    } else {
+      const light = rand(60, 80)
+      particles.push({ x, y, vx: Math.cos(rand(0, Math.PI * 2)) * spd, vy: Math.sin(rand(0, Math.PI * 2)) * spd, alpha: 1, fade: rand(0.005, 0.015), size, hue, sat, light, type: 'text', tx: x + tp.x, ty: y + tp.y, arrived: false })
+    }
+    const extra = 30
+    for (let i = 0; i < extra; i++) {
+      const ang = rand(0, Math.PI * 2)
+      const spd = rand(0.6, 1.6)
+      particles.push({ x, y, vx: Math.cos(ang) * spd, vy: Math.sin(ang) * spd, alpha: 1, fade: rand(0.01, 0.03), size: rand(1.0, 2.0), hue, sat: rand(70, 100), light: rand(45, 65) })
+    }
+  } else {
+    const count = 100
+    for (let i = 0; i < count; i++) {
       const ang = rand(0, Math.PI * 2)
       const spd = rand(0.6, 1.6)
       const fade = rand(0.003, 0.007)
