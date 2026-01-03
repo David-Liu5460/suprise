@@ -1,0 +1,2 @@
+
+7beb0f957bfe868d40d49a4cf4f793c5b035af99	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/whatwg-url/-/whatwg-url-5.0.0.tgz","integrity":"sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==","time":1767344714141,"size":11073,"metadata":{"time":1767344714109,"url":"https://bnpm.byted.org/whatwg-url/-/whatwg-url-5.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

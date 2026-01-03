@@ -1,0 +1,2 @@
+
+e7a421c49a1d1cc24259fd3e83ed39a033965f39	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/brace-expansion/-/brace-expansion-1.1.12.tgz","integrity":"sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==","time":1767344713744,"size":4246,"metadata":{"time":1767344713712,"url":"https://bnpm.byted.org/brace-expansion/-/brace-expansion-1.1.12.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:13 GMT"},"options":{"compress":true}}}

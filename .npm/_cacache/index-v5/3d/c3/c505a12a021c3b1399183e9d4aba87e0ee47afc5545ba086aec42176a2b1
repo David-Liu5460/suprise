@@ -1,0 +1,2 @@
+
+defb31c9bbc330b6bfbd363bf12dd7a742480b4b	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/chokidar/-/chokidar-4.0.0.tgz","integrity":"sha512-mxIojEAQcuEvT/lyXq+jf/3cO/KoA6z4CeNDGGevTybECPOMFCnQy3OPahluUkbqgPNGw5Bi78UC7Po6Lhy+NA==","time":1767344598388,"size":37124,"metadata":{"time":1767344598300,"url":"https://bnpm.byted.org/chokidar/-/chokidar-4.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

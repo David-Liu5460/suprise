@@ -1,0 +1,2 @@
+
+f4c67a0ba86b9f1b152bc5d210a43ec05eaaabb1	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/build-utils/-/build-utils-13.2.4.tgz","integrity":"sha512-12m+8Z+wsxJUoWZ+JQqRk8v1O0ioJhGYWz+yStW8abuzfNz75QW2rRcbn0hSHuF8c7b3D2papmMdh94kSSYQEw==","time":1767344598718,"size":291398,"metadata":{"time":1767344598583,"url":"https://bnpm.byted.org/@vercel/build-utils/-/build-utils-13.2.4.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

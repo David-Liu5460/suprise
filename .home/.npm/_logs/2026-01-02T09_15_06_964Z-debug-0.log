@@ -1,0 +1,22 @@
+0 verbose cli /Users/bytedance/.nvm/versions/node/v18.20.5/bin/node /Users/bytedance/.nvm/versions/node/v18.20.5/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v18.20.5
+3 silly config load:file:/Users/bytedance/.nvm/versions/node/v18.20.5/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/bytedance/.npmrc
+5 silly config load:file:/Users/bytedance/Documents/trae_projects/fireworks-2026/.home/.npmrc
+6 silly config load:file:/Users/bytedance/.nvm/versions/node/v18.20.5/etc/npmrc
+7 verbose title npm exec vercel@latest --yes --prod --cwd .
+8 verbose argv "exec" "--" "vercel@latest" "--yes" "--prod" "--cwd" "."
+9 verbose logfile logs-max:10 dir:/Users/bytedance/Documents/trae_projects/fireworks-2026/.home/.npm/_logs/2026-01-02T09_15_06_964Z-
+10 verbose logfile /Users/bytedance/Documents/trae_projects/fireworks-2026/.home/.npm/_logs/2026-01-02T09_15_06_964Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 http fetch GET 200 https://bnpm.byted.org/vercel 216ms (cache revalidated)
+14 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+15 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+16 verbose cwd /Users/bytedance/Documents/trae_projects/fireworks-2026
+17 verbose os Darwin 23.6.0
+18 verbose node v18.20.5
+19 verbose npm  v10.8.2
+20 verbose exit 0
+21 info ok

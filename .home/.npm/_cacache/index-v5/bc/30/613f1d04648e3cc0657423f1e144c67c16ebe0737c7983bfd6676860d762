@@ -1,0 +1,2 @@
+
+a6d57a6f28ecc17a6f1f065fbe6de6701c7f0042	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/esbuild/-/esbuild-0.23.1.tgz","integrity":"sha512-VVNz/9Sa0bs5SELtn3f7qhJCDPCF5oMEl5cO9/SSinpE9hbPVvxbd572HH5AKiP7WD8INO53GgfDDhRjkylHEg==","time":1767344715292,"size":30549,"metadata":{"time":1767344715257,"url":"https://bnpm.byted.org/esbuild/-/esbuild-0.23.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:15 GMT"},"options":{"compress":true}}}

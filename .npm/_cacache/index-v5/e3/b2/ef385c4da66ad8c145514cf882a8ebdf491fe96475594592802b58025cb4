@@ -1,0 +1,2 @@
+
+04277ede00c0cd0b23150dd05a5e48d99463aa92	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/redwood/-/redwood-2.4.6.tgz","integrity":"sha512-lJgRENm7yZHvSMiGTFXd/x1Asz6MTFACfJHHMDThNL2hESvpbrOpp27t/NfNMCrV7TUEedHOE1fNIogy704S0Q==","time":1767344598377,"size":37337,"metadata":{"time":1767344598369,"url":"https://bnpm.byted.org/@vercel/redwood/-/redwood-2.4.6.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

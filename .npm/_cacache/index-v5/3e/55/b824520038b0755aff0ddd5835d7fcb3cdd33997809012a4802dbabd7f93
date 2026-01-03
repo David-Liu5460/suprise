@@ -1,0 +1,2 @@
+
+87765c601a31087fc008d58afb5a4b18566f5a72	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz","integrity":"sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==","time":1767344598008,"size":8998,"metadata":{"time":1767344598002,"url":"https://bnpm.byted.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

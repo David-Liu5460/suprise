@@ -1,0 +1,2 @@
+
+7d9ae186ad9ffaf7683eac0be88fca1827ecaf16	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@esbuild/darwin-arm64/-/darwin-arm64-0.23.1.tgz","integrity":"sha512-YsS2e3Wtgnw7Wq53XXBLcV6JhRsEq8hkfg91ESVadIrzr9wO6jJDMZnCQbHm1Guc5t/CdDiFSSfWP58FNuvT3Q==","time":1767344717710,"size":4044790,"metadata":{"time":1767344715260,"url":"https://bnpm.byted.org/@esbuild/darwin-arm64/-/darwin-arm64-0.23.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:15 GMT"},"options":{"compress":true}}}

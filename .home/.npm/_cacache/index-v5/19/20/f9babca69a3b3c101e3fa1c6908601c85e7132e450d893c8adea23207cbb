@@ -1,0 +1,2 @@
+
+f828f2c53fe1174798080fbcfa676865bdb5eb4d	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/path-scurry/-/path-scurry-2.0.1.tgz","integrity":"sha512-oWyT4gICAu+kaA7QWk/jvCHWarMKNs6pXOGWKDTr7cw4IGcUbW+PeTfbaQiLGheFRpjo6O9J0PmyMfQPjH71oA==","time":1767344714344,"size":101594,"metadata":{"time":1767344714149,"url":"https://bnpm.byted.org/path-scurry/-/path-scurry-2.0.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

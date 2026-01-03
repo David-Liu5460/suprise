@@ -1,0 +1,2 @@
+
+35663f2773db347fafed73e653dbff39d50dd508	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/rust/-/rust-1.0.4.tgz","integrity":"sha512-G0uO7+j0c/r1vlumlC6KgBfAq9/eip43C96fxnhoN6aeesChrFh8dTeU6Qh9E26AGzHYBENjkpw0Qk4/FbI1ww==","time":1767344598384,"size":9187,"metadata":{"time":1767344598377,"url":"https://bnpm.byted.org/@vercel/rust/-/rust-1.0.4.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

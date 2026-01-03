@@ -1,0 +1,2 @@
+
+b8a41248bd0f537d418bdde98845d6fecd0b5982	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/pump/-/pump-3.0.3.tgz","integrity":"sha512-todwxLMY7/heScKmntwQG8CXVkWUOdYxIvY2s0VWAAMh/nd8SoYiRaKjlr7+iCs984f2P8zvrfWcDDYVb73NfA==","time":1767344597319,"size":3736,"metadata":{"time":1767344597310,"url":"https://bnpm.byted.org/pump/-/pump-3.0.3.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

@@ -1,0 +1,2 @@
+
+ecbd1702f9523272c2cc6b7a0ed4906dad23a841	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/iconv-lite/-/iconv-lite-0.4.24.tgz","integrity":"sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==","time":1767344714214,"size":185241,"metadata":{"time":1767344714058,"url":"https://bnpm.byted.org/iconv-lite/-/iconv-lite-0.4.24.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

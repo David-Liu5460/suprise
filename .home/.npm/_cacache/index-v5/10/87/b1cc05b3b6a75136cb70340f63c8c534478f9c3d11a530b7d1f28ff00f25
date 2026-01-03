@@ -1,0 +1,2 @@
+
+a8f8722b7f3ece7f4c77966d75d9ed06193f6d4b	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz","integrity":"sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==","time":1767344713821,"size":6391,"metadata":{"time":1767344713815,"url":"https://bnpm.byted.org/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:13 GMT"},"options":{"compress":true}}}

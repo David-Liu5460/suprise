@@ -1,0 +1,2 @@
+
+a90be9f8cea2beac661574934fa861af1176e49a	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@isaacs/balanced-match/-/balanced-match-4.0.1.tgz","integrity":"sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==","time":1767344597285,"size":4438,"metadata":{"time":1767344597274,"url":"https://bnpm.byted.org/@isaacs/balanced-match/-/balanced-match-4.0.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

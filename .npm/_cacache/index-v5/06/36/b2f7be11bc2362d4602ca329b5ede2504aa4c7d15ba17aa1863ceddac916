@@ -1,0 +1,2 @@
+
+0f0f3bb2484f53be316a23747731337481842556	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/acorn-import-attributes/-/acorn-import-attributes-1.9.5.tgz","integrity":"sha512-n02Vykv5uA3eHGM/Z2dQrcD56kL8TyDb2p1+0P83PClMnC/nc+anbQRhIOWnSq4Ke/KvDPrY3C9hDtC/A3eHnQ==","time":1767344598062,"size":5005,"metadata":{"time":1767344598052,"url":"https://bnpm.byted.org/acorn-import-attributes/-/acorn-import-attributes-1.9.5.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

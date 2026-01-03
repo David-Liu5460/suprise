@@ -1,0 +1,2 @@
+
+a11f186394b785c880c5da34c0e263682ed2321f	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/abbrev/-/abbrev-3.0.1.tgz","integrity":"sha512-AO2ac6pjRB3SJmGJo+v5/aK6Omggp6fsLrs6wN9bd35ulu4cCwaAU9+7ZhXjeqHVkaHThLuzH0nZr0YpCDhygg==","time":1767344597280,"size":2426,"metadata":{"time":1767344597263,"url":"https://bnpm.byted.org/abbrev/-/abbrev-3.0.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

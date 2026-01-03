@@ -1,0 +1,2 @@
+
+5b8e67c7697948c37b37ec3c687596e458248c76	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/detect-libc/-/detect-libc-2.1.2.tgz","integrity":"sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==","time":1767344714510,"size":7776,"metadata":{"time":1767344714454,"url":"https://bnpm.byted.org/detect-libc/-/detect-libc-2.1.2.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

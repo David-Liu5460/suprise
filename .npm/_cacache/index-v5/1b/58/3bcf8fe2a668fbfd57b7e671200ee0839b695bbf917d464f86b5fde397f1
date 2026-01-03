@@ -1,0 +1,2 @@
+
+088d1efc5243aa02672f4935644b7d695efe6d97	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/npm-run-path/-/npm-run-path-4.0.1.tgz","integrity":"sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==","time":1767344597442,"size":2984,"metadata":{"time":1767344597433,"url":"https://bnpm.byted.org/npm-run-path/-/npm-run-path-4.0.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

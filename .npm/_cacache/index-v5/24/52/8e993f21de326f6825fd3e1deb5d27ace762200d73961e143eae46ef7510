@@ -1,0 +1,2 @@
+
+6084e5d657ade000cb636f74a09c3cd1e23892d3	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@vercel/fun/-/fun-1.2.0.tgz","integrity":"sha512-WSmS9qe2R+5roucDEwYB3atKhs9sUbkHV3laJGEUoqz25O83jLE/jqg/B/3yTunB0av1xqiCIBFFVKnXsqSc8w==","time":1767344598740,"size":37363,"metadata":{"time":1767344598573,"url":"https://bnpm.byted.org/@vercel/fun/-/fun-1.2.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

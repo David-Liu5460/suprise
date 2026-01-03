@@ -1,0 +1,2 @@
+
+8589e44965e78a370d5b5e8c74c2bf98fc21648e	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/estree-walker/-/estree-walker-2.0.2.tgz","integrity":"sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==","time":1767344714513,"size":8353,"metadata":{"time":1767344714476,"url":"https://bnpm.byted.org/estree-walker/-/estree-walker-2.0.2.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

@@ -1,0 +1,2 @@
+
+5e713d165540dc43c0bb0a30db88cf969379ffa8	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/os-paths/-/os-paths-4.4.0.tgz","integrity":"sha512-wrAwOeXp1RRMFfQY8Sy7VaGVmPocaLwSFOYCGKSyo8qmJ+/yaafCl5BCA1IQZWqFSRBrKDYFeR9d/VyQzfH/jg==","time":1767344713993,"size":11161,"metadata":{"time":1767344713949,"url":"https://bnpm.byted.org/os-paths/-/os-paths-4.4.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

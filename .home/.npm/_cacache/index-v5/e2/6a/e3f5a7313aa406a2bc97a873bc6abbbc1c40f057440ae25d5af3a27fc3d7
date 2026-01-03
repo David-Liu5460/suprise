@@ -1,0 +1,2 @@
+
+d605f15087b0fb748ed965dcb416e215d0eb4361	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/rolldown/-/rolldown-1.0.0-beta.52.tgz","integrity":"sha512-Hbnpljue+JhMJrlOjQ1ixp9me7sUec7OjFvS+A1Qm8k8Xyxmw3ZhxFu7LlSXW1s9AX3POE9W9o2oqCEeR5uDmg==","time":1767344715375,"size":118551,"metadata":{"time":1767344715339,"url":"https://bnpm.byted.org/rolldown/-/rolldown-1.0.0-beta.52.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:15 GMT"},"options":{"compress":true}}}

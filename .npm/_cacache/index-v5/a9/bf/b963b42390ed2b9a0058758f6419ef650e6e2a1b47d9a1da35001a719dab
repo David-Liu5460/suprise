@@ -1,0 +1,2 @@
+
+3053674e7fc3877bc8495f9a18aa6ffefd5b43ae	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/raw-body/-/raw-body-2.4.1.tgz","integrity":"sha512-9WmIKF6mkvA0SLmA2Knm9+qj89e+j1zqgyn8aXGd7+nAduPoqgI9lO57SAZNn/Byzo5P7JhXTyg9PzaJbH73bA==","time":1767344597288,"size":7661,"metadata":{"time":1767344597277,"url":"https://bnpm.byted.org/raw-body/-/raw-body-2.4.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

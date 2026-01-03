@@ -1,0 +1,2 @@
+
+ed9fdd8a44edbc2a328033195f93f067d515bbd4	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/micro/-/micro-9.3.5-canary.3.tgz","integrity":"sha512-viYIo9PefV+w9dvoIBh1gI44Mvx1BOk67B4BpC2QK77qdY0xZF0Q+vWLt/BII6cLkIc8rLmSIcJaB/OrXXKe1g==","time":1767344598160,"size":9681,"metadata":{"time":1767344598156,"url":"https://bnpm.byted.org/micro/-/micro-9.3.5-canary.3.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

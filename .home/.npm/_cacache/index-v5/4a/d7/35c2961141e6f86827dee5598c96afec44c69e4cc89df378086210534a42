@@ -1,0 +1,2 @@
+
+8f4404c422dc2dc889db69a737507bef237306b2	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz","integrity":"sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w==","time":1767344713740,"size":12383,"metadata":{"time":1767344713711,"url":"https://bnpm.byted.org/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:13 GMT"},"options":{"compress":true}}}

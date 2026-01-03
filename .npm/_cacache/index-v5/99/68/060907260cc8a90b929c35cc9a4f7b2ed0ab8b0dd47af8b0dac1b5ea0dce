@@ -1,0 +1,2 @@
+
+344149b0ed2587fc32b374fb7f6244560b3b3bf9	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz","integrity":"sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==","time":1767344597181,"size":125759,"metadata":{"time":1767344597140,"url":"https://bnpm.byted.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

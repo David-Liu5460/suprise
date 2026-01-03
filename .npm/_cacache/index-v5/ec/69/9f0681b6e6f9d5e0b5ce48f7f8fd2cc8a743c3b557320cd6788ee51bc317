@@ -1,0 +1,2 @@
+
+49b4177e33213e4d7a2904e284cf25e6d044cc32	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/node-gyp-build/-/node-gyp-build-4.8.4.tgz","integrity":"sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==","time":1767344598058,"size":5449,"metadata":{"time":1767344598046,"url":"https://bnpm.byted.org/node-gyp-build/-/node-gyp-build-4.8.4.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

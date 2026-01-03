@@ -1,0 +1,2 @@
+
+d144977a3c2188e4214cce6b2e3dd305f9741ac7	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/micromatch/-/micromatch-4.0.8.tgz","integrity":"sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==","time":1767344713993,"size":14663,"metadata":{"time":1767344713949,"url":"https://bnpm.byted.org/micromatch/-/micromatch-4.0.8.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

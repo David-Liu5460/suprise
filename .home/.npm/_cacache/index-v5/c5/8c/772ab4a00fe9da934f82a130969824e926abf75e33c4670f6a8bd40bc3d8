@@ -1,0 +1,2 @@
+
+9fd8e13e66897522ec977bc1ac2bce736aa9fb49	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/generic-pool/-/generic-pool-3.4.2.tgz","integrity":"sha512-H7cUpwCQSiJmAHM4c/aFu6fUfrhWXW1ncyh8ftxEPMu6AiYkHw9K8br720TGPZJbk5eOH2bynjZD1yPvdDAmag==","time":1767344714663,"size":25335,"metadata":{"time":1767344714630,"url":"https://bnpm.byted.org/generic-pool/-/generic-pool-3.4.2.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

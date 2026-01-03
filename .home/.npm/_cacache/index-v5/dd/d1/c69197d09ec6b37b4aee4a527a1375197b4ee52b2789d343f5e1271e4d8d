@@ -1,0 +1,2 @@
+
+b560ff20fe0d8ed797eceb5f622eff5f827cebe2	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/web-vitals/-/web-vitals-0.2.4.tgz","integrity":"sha512-6BjspCO9VriYy12z356nL6JBS0GYeEcA457YyRzD+dD6XYCQ75NKhcOHUMHentOE7OcVCIXXDvOm0jKFfQG2Gg==","time":1767344714510,"size":21041,"metadata":{"time":1767344714449,"url":"https://bnpm.byted.org/web-vitals/-/web-vitals-0.2.4.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

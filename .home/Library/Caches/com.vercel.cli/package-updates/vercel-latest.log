@@ -1,0 +1,15 @@
+[2026-01-02T09:06:39.985Z] [debug] Notifying parent we're ready
+[2026-01-02T09:06:39.987Z] [debug] Received message from parent: {
+  cacheFile: '/Users/bytedance/Documents/trae_projects/fireworks-2026/.home/Library/Caches/com.vercel.cli/package-updates/vercel-latest.json',
+  distTag: 'latest',
+  name: 'vercel',
+  updateCheckInterval: 86400000
+}
+[2026-01-02T09:06:39.987Z] [debug] Disconnecting from parent
+[2026-01-02T09:06:39.988Z] [debug] Checking lock file: /Users/bytedance/Documents/trae_projects/fireworks-2026/.home/Library/Caches/com.vercel.cli/package-updates/vercel-latest.lock
+[2026-01-02T09:06:39.988Z] [debug] Initializing lock file with pid 21184
+[2026-01-02T09:06:39.989Z] [debug] Fetching https://registry.npmjs.org/-/package/vercel/dist-tags
+[2026-01-02T09:06:40.819Z] [debug] Found dist tag "latest" with version "50.1.3"
+[2026-01-02T09:06:40.819Z] [debug] Writing cache file: /Users/bytedance/Documents/trae_projects/fireworks-2026/.home/Library/Caches/com.vercel.cli/package-updates/vercel-latest.json
+[2026-01-02T09:06:40.821Z] [debug] Releasing lock file: /Users/bytedance/Documents/trae_projects/fireworks-2026/.home/Library/Caches/com.vercel.cli/package-updates/vercel-latest.lock
+[2026-01-02T09:06:40.822Z] [debug] Worker finished successfully!

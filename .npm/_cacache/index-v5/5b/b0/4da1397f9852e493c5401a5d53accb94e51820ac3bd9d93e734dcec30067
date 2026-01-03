@@ -1,0 +1,2 @@
+
+7b407efb044371fd54dcd722b5821d098653a27b	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/graceful-fs/-/graceful-fs-4.2.11.tgz","integrity":"sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==","time":1767344598062,"size":9804,"metadata":{"time":1767344598051,"url":"https://bnpm.byted.org/graceful-fs/-/graceful-fs-4.2.11.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

@@ -1,0 +1,2 @@
+
+90e9b856b34e07fbca97fe0c4be6c93432b6243f	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/@emnapi/runtime/-/runtime-1.7.1.tgz","integrity":"sha512-PVtJr5CmLwYAU9PZDMITZoR5iAOShYREoR45EyyLrbntV50mdePTgUn4AmOw90Ifcj+x2kRjdzr1HP3RrNiHGA==","time":1767344597211,"size":65407,"metadata":{"time":1767344597147,"url":"https://bnpm.byted.org/@emnapi/runtime/-/runtime-1.7.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}

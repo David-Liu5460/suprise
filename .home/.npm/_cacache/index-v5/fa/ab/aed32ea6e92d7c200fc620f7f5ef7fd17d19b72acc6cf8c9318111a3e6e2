@@ -1,0 +1,2 @@
+
+b9de1bea1d1b49dc8c6a14cfd2802960739261cb	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/etag/-/etag-1.8.1.tgz","integrity":"sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==","time":1767344714433,"size":4386,"metadata":{"time":1767344714410,"url":"https://bnpm.byted.org/etag/-/etag-1.8.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:05:14 GMT"},"options":{"compress":true}}}

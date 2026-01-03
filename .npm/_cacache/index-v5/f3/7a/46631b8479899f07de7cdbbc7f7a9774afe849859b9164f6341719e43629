@@ -1,0 +1,2 @@
+
+13746e2224a9b411aa8e3ec50a74c95984cf6e29	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/ts-morph/-/ts-morph-12.0.0.tgz","integrity":"sha512-VHC8XgU2fFW7yO1f/b3mxKDje1vmyzFXHWzOYmKEkCEwcLjDtbdLgBQviqj4ZwP4MJkQtRo6Ha2I29lq/B+VxA==","time":1767344598325,"size":224978,"metadata":{"time":1767344598296,"url":"https://bnpm.byted.org/ts-morph/-/ts-morph-12.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:18 GMT"},"options":{"compress":true}}}

@@ -1,0 +1,2 @@
+
+5a60334c00584159d0c2e329d41e398a110f0e6c	{"key":"make-fetch-happen:request-cache:https://bnpm.byted.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz","integrity":"sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==","time":1767344597602,"size":6074,"metadata":{"time":1767344597595,"url":"https://bnpm.byted.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"application/x-gzip","date":"Fri, 02 Jan 2026 09:03:17 GMT"},"options":{"compress":true}}}
