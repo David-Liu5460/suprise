@@ -1,6 +1,5 @@
 const canvas = document.getElementById('stage')
 const ctx = canvas.getContext('2d')
-const yearEl = document.getElementById('year')
 
 let w = 0
 let h = 0
@@ -25,34 +24,83 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v))
 const fireworks = []
 const particles = []
 let spawnerId = null
-let yearShown = false
+const phrases = ['猪猪，生日快乐','每天爱你多一些','朱 ❤️ 刘']
+const textCanvas = document.createElement('canvas')
+const textCtx = textCanvas.getContext('2d')
 
 function spawnRocket(targetX, targetY) {
-  const sx = rand(w * 0.2, w * 0.8)
   const sy = h + 10
-  const m = Math.min(Math.max(140, Math.min(w, h) * 0.22), Math.min(w, h) * 0.45)
-  const tx = targetX != null ? clamp(targetX, m, w - m) : rand(m, w - m)
-  const ty = targetY != null ? clamp(targetY, m, h - m) : rand(m, h - m)
+  let tx
+  const r = Math.random()
+  if (targetX != null) tx = clamp(targetX, w * 0.1, w * 0.9)
+  else if (r < 0.33) tx = rand(w * 0.12, w * 0.35)
+  else if (r < 0.66) tx = rand(w * 0.4, w * 0.6)
+  else tx = rand(w * 0.65, w * 0.88)
+  const sx = rand(tx - w * 0.15, tx + w * 0.15)
+  const ty = targetY != null ? clamp(targetY, h * 0.25, h * 0.65) : rand(h * 0.28, h * 0.62)
   const dx = tx - sx
   const dy = ty - sy
   const dist = Math.hypot(dx, dy)
-  const speed = rand(3.0, 4.5)
+  const speed = rand(3.2, 4.6)
   const vx = (dx / dist) * speed
   const vy = (dy / dist) * speed
   const hue = rand(0, 360)
   fireworks.push({ x: sx, y: sy, vx, vy, tx, ty, hue })
 }
 
+function getTextPoints(text, fontSize) {
+  const pad = 20
+  textCtx.font = 'bold ' + fontSize + 'px system-ui, \u5FAE\u8F6F\u96C5\u9ED1, Noto Sans SC, sans-serif'
+  const m = textCtx.measureText(text)
+  const tw = Math.ceil(m.width) + pad * 2
+  const th = Math.ceil(fontSize * 1.4) + pad * 2
+  textCanvas.width = tw
+  textCanvas.height = th
+  textCtx.clearRect(0, 0, tw, th)
+  textCtx.fillStyle = '#fff'
+  textCtx.font = 'bold ' + fontSize + 'px system-ui, \u5FAE\u8F6F\u96C5\u9ED1, Noto Sans SC, sans-serif'
+  textCtx.textBaseline = 'middle'
+  textCtx.textAlign = 'center'
+  textCtx.fillText(text, tw / 2, th / 2)
+  const img = textCtx.getImageData(0, 0, tw, th).data
+  const pts = []
+  const step = 4
+  for (let y0 = 0; y0 < th; y0 += step) {
+    for (let x0 = 0; x0 < tw; x0 += step) {
+      const idx = (y0 * tw + x0) * 4 + 3
+      if (img[idx] > 10) pts.push({ x: x0 - tw / 2, y: y0 - th / 2 })
+    }
+  }
+  return pts
+}
+
 function explode(x, y, hue) {
-  const count = 80
+  const count = 100
+  const showText = Math.random() < 0.6
+  let textPts = null
+  if (showText) {
+    const text = phrases[Math.floor(rand(0, phrases.length))]
+    const fs = Math.floor(Math.min(48, Math.max(28, Math.min(w, h) * 0.06)))
+    textPts = getTextPoints(text, fs)
+  }
   for (let i = 0; i < count; i++) {
-    const ang = (i / count) * Math.PI * 2 + rand(-0.05, 0.05)
-    const spd = rand(0.6, 1.5)
-    const fade = rand(0.003, 0.007)
-    const size = rand(1.0, 2.4)
-    const sat = rand(70, 100)
-    const light = rand(45, 65)
-    particles.push({ x, y, vx: Math.cos(ang) * spd, vy: Math.sin(ang) * spd, alpha: 1, fade, size, hue, sat, light })
+    if (textPts && Math.random() < 0.8) {
+      const pidx = Math.floor(rand(0, textPts.length))
+      const tp = textPts[pidx]
+      const spd = rand(0.4, 1.0)
+      const size = rand(1.2, 2.0)
+      const sat = rand(70, 100)
+      const light = rand(55, 75)
+      particles.push({ x, y, vx: Math.cos(rand(0, Math.PI * 2)) * spd, vy: Math.sin(rand(0, Math.PI * 2)) * spd, alpha: 0.9, fade: 0.0, size, hue, sat, light, type: 'text', tx: x + tp.x, ty: y + tp.y, arrived: false })
+    } else {
+      const ang = rand(0, Math.PI * 2)
+      const spd = rand(0.6, 1.6)
+      const fade = rand(0.003, 0.007)
+      const size = rand(1.0, 2.4)
+      const sat = rand(70, 100)
+      const light = rand(45, 65)
+      particles.push({ x, y, vx: Math.cos(ang) * spd, vy: Math.sin(ang) * spd, alpha: 1, fade, size, hue, sat, light })
+    }
   }
 }
 
@@ -72,7 +120,7 @@ function step() {
     f.vy += 0.012
     const dx = f.tx - f.x
     const dy = f.ty - f.y
-    if (dx * dx + dy * dy < 16 * 16) {
+    if (dx * dx + dy * dy < 16 * 16 || f.y < 24 || f.x < 12 || f.x > w - 12) {
       explode(f.x, f.y, f.hue)
       fireworks.splice(i, 1)
       continue
@@ -85,12 +133,23 @@ function step() {
 
   for (let i = particles.length - 1; i >= 0; i--) {
     const p = particles[i]
-    p.x += p.vx
-    p.y += p.vy
-    p.vx *= 0.972
-    p.vy *= 0.972
-    p.vy += 0.03
-    p.alpha -= p.fade
+    if (p.type === 'text') {
+      const dx = p.tx - p.x
+      const dy = p.ty - p.y
+      p.vx = p.vx * 0.88 + dx * 0.04
+      p.vy = p.vy * 0.88 + dy * 0.04
+      p.x += p.vx
+      p.y += p.vy
+      if (!p.arrived && dx * dx + dy * dy < 9) { p.arrived = true; p.fade = rand(0.005, 0.015) }
+      if (p.arrived) p.alpha -= p.fade
+    } else {
+      p.x += p.vx
+      p.y += p.vy
+      p.vx *= 0.972
+      p.vy *= 0.972
+      p.vy += 0.03
+      p.alpha -= p.fade
+    }
     if (p.alpha <= 0 || p.y > h + 50) {
       particles.splice(i, 1)
       continue
@@ -116,16 +175,14 @@ canvas.addEventListener('click', e => {
 
 function startContinuous() {
   if (spawnerId) return
-  spawnerId = setInterval(() => {
-    if (fireworks.length < 6) spawnRocket()
-  }, 900)
+  const schedule = () => {
+    const delay = Math.floor(rand(650, 1400))
+    spawnerId = setTimeout(() => {
+      if (fireworks.length < 8) spawnRocket()
+      schedule()
+    }, delay)
+  }
+  schedule()
 }
 
 startContinuous()
-
-setTimeout(() => {
-  if (!yearShown) {
-    yearEl.classList.add('show')
-    yearShown = true
-  }
-}, 5000)
