@@ -78,16 +78,16 @@ function explode(x, y, hue) {
   const showText = Math.random() < 0.8
   if (showText) {
     const text = phrases[Math.floor(rand(0, phrases.length))]
-    const fs = Math.floor(Math.min(60, Math.max(32, Math.min(w, h) * 0.08)))
+    const fs = Math.floor(Math.min(70, Math.max(40, Math.min(w, h) * 0.1)))
     const textPts = getTextPoints(text, fs)
     const step = 2 
     for (let i = 0; i < textPts.length; i += step) {
       const tp = textPts[i]
       const spd = rand(0.4, 1.0)
-      const size = rand(1.2, 2.2)
+      const size = rand(1.5, 2.5)
       const sat = rand(70, 100)
-      const light = rand(60, 80)
-      particles.push({ x, y, vx: Math.cos(rand(0, Math.PI * 2)) * spd, vy: Math.sin(rand(0, Math.PI * 2)) * spd, alpha: 1, fade: rand(0.005, 0.015), size, hue, sat, light, type: 'text', tx: x + tp.x, ty: y + tp.y, arrived: false })
+      const light = rand(70, 95)
+      particles.push({ x, y, vx: Math.cos(rand(0, Math.PI * 2)) * spd, vy: Math.sin(rand(0, Math.PI * 2)) * spd, alpha: 1, fade: rand(0.003, 0.008), stay: rand(180, 240), size, hue, sat, light, type: 'text', tx: x + tp.x, ty: y + tp.y, arrived: false })
     }
     const extra = 30
     for (let i = 0; i < extra; i++) {
@@ -141,12 +141,24 @@ function step() {
     if (p.type === 'text') {
       const dx = p.tx - p.x
       const dy = p.ty - p.y
-      p.vx = p.vx * 0.88 + dx * 0.04
-      p.vy = p.vy * 0.88 + dy * 0.04
+      p.vx = p.vx * 0.85 + dx * 0.08
+      p.vy = p.vy * 0.85 + dy * 0.08
       p.x += p.vx
       p.y += p.vy
-      if (!p.arrived && dx * dx + dy * dy < 9) { p.arrived = true; p.fade = rand(0.005, 0.015) }
-      if (p.arrived) p.alpha -= p.fade
+      if (!p.arrived && dx * dx + dy * dy < 4) {
+        p.arrived = true
+        p.vx = 0
+        p.vy = 0
+      }
+      if (p.arrived) {
+        if (p.stay > 0) {
+          p.stay--
+          p.alpha = 1
+        } else {
+          p.alpha -= p.fade
+          p.y += 0.3
+        }
+      }
     } else {
       p.x += p.vx
       p.y += p.vy
