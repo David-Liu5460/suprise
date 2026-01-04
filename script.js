@@ -48,7 +48,7 @@ function spawnRocket(targetX, targetY) {
   fireworks.push({ x: sx, y: sy, vx, vy, tx, ty, hue })
 }
 
-function getTextPoints(text, fontSize) {
+function getTextData(text, fontSize) {
   const pad = 20
   textCtx.font = 'bold ' + fontSize + 'px system-ui, \u5FAE\u8F6F\u96C5\u9ED1, Noto Sans SC, sans-serif'
   const m = textCtx.measureText(text)
@@ -64,30 +64,33 @@ function getTextPoints(text, fontSize) {
   textCtx.fillText(text, tw / 2, th / 2)
   const img = textCtx.getImageData(0, 0, tw, th).data
   const pts = []
-  const step = 4
+  const step = 2
   for (let y0 = 0; y0 < th; y0 += step) {
     for (let x0 = 0; x0 < tw; x0 += step) {
       const idx = (y0 * tw + x0) * 4 + 3
       if (img[idx] > 10) pts.push({ x: x0 - tw / 2, y: y0 - th / 2 })
     }
   }
-  return pts
+  return { pts, tw, th }
 }
 
 function explode(x, y, hue) {
   const showText = Math.random() < 0.8
   if (showText) {
     const text = phrases[Math.floor(rand(0, phrases.length))]
-    const fs = Math.floor(Math.min(70, Math.max(40, Math.min(w, h) * 0.1)))
-    const textPts = getTextPoints(text, fs)
-    const step = 2 
-    for (let i = 0; i < textPts.length; i += step) {
-      const tp = textPts[i]
-      const spd = rand(0.4, 1.0)
-      const size = rand(1.5, 2.5)
-      const sat = rand(70, 100)
-      const light = rand(70, 95)
-      particles.push({ x, y, vx: Math.cos(rand(0, Math.PI * 2)) * spd, vy: Math.sin(rand(0, Math.PI * 2)) * spd, alpha: 1, fade: rand(0.003, 0.008), stay: rand(180, 240), size, hue, sat, light, type: 'text', tx: x + tp.x, ty: y + tp.y, arrived: false })
+    const fs = Math.floor(Math.min(80, Math.max(44, Math.min(w, h) * 0.12)))
+    const data = getTextData(text, fs)
+    const m = 24
+    const bx = clamp(x, data.tw / 2 + m, w - data.tw / 2 - m)
+    const by = clamp(y, data.th / 2 + m, h - data.th / 2 - m)
+    for (let i = 0; i < data.pts.length; i++) {
+      const tp = data.pts[i]
+      const spd = rand(0.3, 0.9)
+      const size = rand(1.6, 2.8)
+      const sat = rand(75, 100)
+      const light = rand(80, 98)
+      particles.push({ x, y, vx: Math.cos(rand(0, Math.PI * 2)) * spd, vy: Math.sin(rand(0, Math.PI * 2)) * spd, alpha: 1, fade: rand(0.002, 0.006), stay: rand(360, 600), size, hue, sat, light, type: 'text', tx: bx + tp.x, ty: by + tp.y, arrived: false })
+      if (Math.random() < 0.35) particles.push({ x, y, vx: 0, vy: 0, alpha: 1, fade: rand(0.002, 0.006), stay: rand(360, 600), size, hue, sat, light, type: 'text', tx: bx + tp.x + rand(-1, 1), ty: by + tp.y + rand(-1, 1), arrived: false })
     }
     const extra = 30
     for (let i = 0; i < extra; i++) {
@@ -141,8 +144,8 @@ function step() {
     if (p.type === 'text') {
       const dx = p.tx - p.x
       const dy = p.ty - p.y
-      p.vx = p.vx * 0.85 + dx * 0.08
-      p.vy = p.vy * 0.85 + dy * 0.08
+      p.vx = p.vx * 0.82 + dx * 0.1
+      p.vy = p.vy * 0.82 + dy * 0.1
       p.x += p.vx
       p.y += p.vy
       if (!p.arrived && dx * dx + dy * dy < 4) {
@@ -156,7 +159,6 @@ function step() {
           p.alpha = 1
         } else {
           p.alpha -= p.fade
-          p.y += 0.3
         }
       }
     } else {
