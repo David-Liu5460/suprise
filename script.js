@@ -89,8 +89,8 @@ function explode(x, y, hue) {
       const size = rand(1.6, 2.8)
       const sat = rand(75, 100)
       const light = rand(80, 98)
-      particles.push({ x, y, vx: Math.cos(rand(0, Math.PI * 2)) * spd, vy: Math.sin(rand(0, Math.PI * 2)) * spd, alpha: 1, fade: rand(0.002, 0.006), stay: rand(360, 600), size, hue, sat, light, type: 'text', tx: bx + tp.x, ty: by + tp.y, arrived: false })
-      if (Math.random() < 0.35) particles.push({ x, y, vx: 0, vy: 0, alpha: 1, fade: rand(0.002, 0.006), stay: rand(360, 600), size, hue, sat, light, type: 'text', tx: bx + tp.x + rand(-1, 1), ty: by + tp.y + rand(-1, 1), arrived: false })
+      particles.push({ x, y, vx: Math.cos(rand(0, Math.PI * 2)) * spd, vy: Math.sin(rand(0, Math.PI * 2)) * spd, alpha: 1, fade: rand(0.0015, 0.004), stayUntil: performance.now() + rand(7000, 12000), size, hue, sat, light, type: 'text', tx: bx + tp.x, ty: by + tp.y, arrived: false })
+      if (Math.random() < 0.35) particles.push({ x, y, vx: 0, vy: 0, alpha: 1, fade: rand(0.0015, 0.004), stayUntil: performance.now() + rand(7000, 12000), size, hue, sat, light, type: 'text', tx: bx + tp.x + rand(-1, 1), ty: by + tp.y + rand(-1, 1), arrived: false })
     }
     const extra = 30
     for (let i = 0; i < extra; i++) {
@@ -154,8 +154,7 @@ function step() {
         p.vy = 0
       }
       if (p.arrived) {
-        if (p.stay > 0) {
-          p.stay--
+        if (p.stayUntil && performance.now() < p.stayUntil) {
           p.alpha = 1
         } else {
           p.alpha -= p.fade
