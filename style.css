@@ -1,15 +1,21 @@
 html, body {
   height: 100%;
 }
+
 body {
   margin: 0;
-  background: radial-gradient(1200px 800px at 50% 60%, #0a0a12 0%, #06060a 60%, #000 100%);
+  background: radial-gradient(1200px 800px at 50% 60%, #050711 0%, #04040b 60%, #020308 100%);
   overflow: hidden;
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
 }
+
 #stage {
   position: fixed;
   inset: 0;
 }
+
+/* 保留但当前未使用的年份标题样式，方便后续扩展静态文案层 */
 #year {
   position: fixed;
   inset: 0;
@@ -29,7 +35,416 @@ body {
   transition: opacity 800ms ease, transform 800ms ease;
   pointer-events: none;
 }
+
 #year.show {
   opacity: 1;
   transform: scale(1);
+}
+
+/* ---------- Gate overlay: 开场小游戏 ---------- */
+
+#gate {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+#gate.gate-visible {
+  display: flex;
+  opacity: 1;
+}
+
+#gate.gate-hidden {
+  display: none;
+  opacity: 0;
+}
+
+#gate.gate-fade-out {
+  transition: opacity 400ms ease, transform 400ms ease;
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+#gate.gate-stage-quiz {
+  background: #f2f2f5;
+}
+
+#gate.gate-stage-pass {
+  background: #ff8a00;
+  color: #2d1300;
+}
+
+#gate.gate-stage-envelope {
+  background: #f3f3f7;
+}
+
+@media (max-width: 480px) {
+  #gate {
+    padding: 16px 12px;
+    align-items: flex-start;
+  }
+}
+
+/* Quiz card */
+
+.gate-quiz-layer {
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.gate-quiz-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 18px 16px;
+  box-shadow: 0 18px 40px rgba(10, 10, 30, 0.22);
+  color: #111827;
+  transform-origin: center;
+  animation: gate-pop-in 260ms ease-out;
+  box-sizing: border-box;
+}
+
+.gate-quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.gate-quiz-tag {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8e8ea0;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #f3f3ff;
+}
+
+.gate-quiz-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #18181b;
+}
+
+.gate-quiz-question {
+  margin: 10px 0 14px;
+  font-size: 15px;
+  color: #374151;
+}
+
+.gate-quiz-input-row {
+  margin-bottom: 8px;
+}
+
+.gate-quiz-input {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #d4d4e0;
+  padding: 9px 12px;
+  font-size: 16px;
+  line-height: 1.4;
+  outline: none;
+  background: #f9f9ff;
+  transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+  box-sizing: border-box;
+}
+
+.gate-quiz-input:focus {
+  border-color: #4c6fff;
+  box-shadow: 0 0 0 2px rgba(76, 111, 255, 0.16);
+  background: #ffffff;
+}
+
+.gate-quiz-error {
+  min-height: 18px;
+  font-size: 12px;
+  color: #d92d20;
+}
+
+.gate-quiz-card.gate-error .gate-quiz-input {
+  border-color: #f97373;
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.36);
+}
+
+.gate-quiz-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.gate-btn {
+  border-radius: 999px;
+  border: none;
+  padding: 0 16px;
+  height: 34px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease, transform 120ms ease;
+}
+
+.gate-btn-ghost {
+  background: #f2f2f7;
+  color: #3f3f46;
+}
+
+.gate-btn-ghost:hover {
+  background: #e4e4f0;
+}
+
+.gate-btn-primary {
+  background: linear-gradient(135deg, #4c6fff, #8b5cff);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.4);
+}
+
+.gate-btn-primary:hover {
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.5);
+  transform: translateY(-1px);
+}
+
+.gate-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@keyframes gate-pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gate-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+.gate-quiz-card.gate-shake {
+  animation: gate-shake 260ms ease-out;
+}
+
+/* Pass screen */
+
+.gate-pass-layer {
+  width: 100%;
+  max-width: 540px;
+}
+
+.gate-pass-inner {
+  color: #2d1300;
+}
+
+.gate-pass-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.gate-pass-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.gate-pass-text {
+  font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 10px 30px rgba(139, 65, 0, 0.38);
+}
+
+.gate-pass-text::after {
+  content: '▍';
+  margin-left: 3px;
+  animation: gate-caret 1s steps(2) infinite;
+}
+
+@keyframes gate-caret {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Envelope */
+
+.gate-envelope-layer {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #18181b;
+}
+
+.gate-envelope-hint {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.gate-envelope {
+  width: min(320px, 78vw);
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+  position: relative;
+}
+
+.gate-envelope-body {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff7e6, #ffe3bf);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  overflow: hidden;
+}
+
+.gate-envelope-pocket {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 62%;
+  background: linear-gradient(135deg, #ffcf8b, #ffa94f);
+}
+
+.gate-envelope-flap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 65%;
+  background: linear-gradient(135deg, #ffe0b2, #ffb74d);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: top center;
+  transition: transform 620ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.gate-envelope-seal {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #ff8a00;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.22em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(148, 89, 0, 0.55);
+}
+
+.gate-envelope-letter {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 10%;
+  top: 32%;
+  background: #fffdf8;
+  border-radius: 14px;
+  padding: 14px 16px 16px;
+  box-shadow: 0 10px 24px rgba(148, 89, 0, 0.28);
+  transform: translateY(26px);
+  opacity: 0;
+  transition: transform 620ms 220ms cubic-bezier(0.19, 1, 0.22, 1), opacity 620ms 220ms ease-out;
+}
+
+.gate-envelope-letter h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.gate-envelope-letter p {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.gate-envelope.opened .gate-envelope-flap {
+  transform: translateY(-110%) rotate(-4deg);
+}
+
+.gate-envelope.opened .gate-envelope-letter {
+  transform: translateY(-6px);
+  opacity: 1;
+}
+
+.gate-envelope.gate-envelope-emphasize .gate-envelope-body {
+  animation: gate-envelope-pulse 900ms ease-out infinite alternate;
+}
+
+@keyframes gate-envelope-pulse {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  }
+  100% {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .gate-pass-title {
+    font-size: 20px;
+  }
+  .gate-pass-text {
+    font-size: 13px;
+  }
+  .gate-envelope-hint {
+    font-size: 13px;
+  }
+  .gate-envelope-letter h2 {
+    font-size: 16px;
+  }
+  .gate-envelope-letter p {
+    font-size: 13px;
+  }
 }
