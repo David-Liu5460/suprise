@@ -14,42 +14,7 @@
     <script src="./script.js"></script>
     <script>
       (function(){
-        var a = document.getElementById('bg-audio');
-        
-        // 尝试自动播放
-        function tryPlay() {
-          a.muted = false;
-          var promise = a.play();
-          
-          if (promise !== undefined) {
-            promise.then(function() {
-              // 自动播放成功
-              console.log("Audio autoplay started!");
-            }).catch(function(error) {
-              // 自动播放失败（通常是因为浏览器策略），回退到交互后播放
-              console.log("Autoplay prevented. Waiting for user interaction.");
-              
-              function startAudio() {
-                a.muted = false;
-                a.play();
-                // 移除监听器
-                document.removeEventListener('click', startAudio);
-                document.removeEventListener('touchstart', startAudio);
-                document.removeEventListener('keydown', startAudio);
-              }
-              
-              document.addEventListener('click', startAudio);
-              document.addEventListener('touchstart', startAudio);
-              document.addEventListener('keydown', startAudio);
-            });
-          }
-        }
-
-        if (document.readyState === 'complete' || document.readyState === 'interactive') {
-          tryPlay();
-        } else {
-          document.addEventListener('DOMContentLoaded', tryPlay);
-        }
+        // 自动播放逻辑已移除，交由 game.js 在解锁烟花时触发
       })();
     </script>
   </body>
