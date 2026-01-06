@@ -91,12 +91,12 @@ let spawnerId = null
 let burstUntil = 0
 
 const phrases = [
-  '生日快乐，刘明！',
   '猪猪，生日快乐',
-  '每天爱你多一些',
-  '朱 ❤️ 刘',
-  '愿你被世界温柔以待',
-  'Happy Birthday'
+  '刘 ❤️ 朱',
+  '杭州夏天的风, 我会永远记得',
+  'Love You 3000',
+  '永远 爱你',
+  '2026 每天开心',
 ]
 
 const textCanvas = document.createElement('canvas')
