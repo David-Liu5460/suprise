@@ -339,5 +339,16 @@
         </section>
       </div>
     </main>
+    <script>
+      ;(() => {
+        if (!('serviceWorker' in navigator)) return
+        const isSecure = window.location.protocol === 'https:' || window.location.hostname === 'localhost'
+        if (!isSecure) return
+
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch(() => {})
+        })
+      })()
+    </script>
   </body>
 </html>
