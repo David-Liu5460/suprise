@@ -15,6 +15,36 @@ body {
   inset: 0;
 }
 
+#rose-entry {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 9999px;
+  background: rgba(225, 29, 72, 0.12);
+  border: 1px solid rgba(225, 29, 72, 0.28);
+  color: rgba(248, 250, 252, 0.92);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+#rose-entry:hover {
+  background: rgba(225, 29, 72, 0.18);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(225, 29, 72, 0.18);
+}
+
+#rose-entry:active {
+  transform: translateY(0);
+}
+
 /* 保留但当前未使用的年份标题样式，方便后续扩展静态文案层 */
 #year {
   position: fixed;
@@ -293,7 +323,7 @@ body {
 }
 
 .gate-pass-text::after {
-  content: '▍';
+  content: "\258D";
   margin-left: 3px;
   animation: gate-caret 1s steps(2) infinite;
 }

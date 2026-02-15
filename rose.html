@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>玫瑰</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .rose-letter-photo {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        flex: 1 1 auto;
+        min-height: 0;
+        object-fit: contain;
+        background: rgba(15, 23, 42, 0.04);
+        border-radius: 12px;
+        display: block;
+        margin: 10px auto 0;
+      }
+
+      #gate.gate-stage-envelope .gate-envelope {
+        width: min(560px, 92vw);
+        aspect-ratio: 3 / 4.5;
+      }
+
+      #gate.gate-stage-envelope .gate-envelope-letter {
+        left: 8%;
+        right: 8%;
+        top: 22%;
+        bottom: 4%;
+        padding: 10px 12px 12px;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-6px);
+        opacity: 1;
+        overflow: hidden;
+        transition: none;
+      }
+
+      #gate.gate-stage-envelope .gate-envelope-letter h2 {
+        margin-bottom: 6px;
+        font-size: 16px;
+      }
+
+      #gate.gate-stage-envelope .gate-envelope-flap {
+        height: 38%;
+        transition: none;
+      }
+
+      #gate.gate-stage-envelope .gate-envelope-seal {
+        transform: translateY(-30%);
+      }
+
+      #gate.gate-stage-envelope .gate-envelope-letter {
+        top: 28%;
+      }
+
+      .rose-letter-note {
+        margin: 6px 0 0;
+        font-size: 13px;
+        line-height: 1.55;
+        color: rgba(24, 24, 27, 0.72);
+      }
+
+      #rose-stage {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 16px;
+        box-sizing: border-box;
+      }
+
+      #rose-stage.rose-stage-visible {
+        display: flex;
+      }
+
+      #c {
+        width: min(92vw, 777px);
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 22px 70px rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.06);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gate" class="gate-visible gate-stage-pass">
+      <div class="gate-pass-layer" id="gate-pass-layer">
+        <div class="gate-pass-inner">
+          <div class="gate-pass-label">LEVEL CLEAR</div>
+          <div class="gate-pass-title">情人节快乐！</div>
+          <div class="gate-pass-text" id="gate-pass-text" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="gate-envelope-layer" id="gate-envelope-layer" hidden>
+        <div class="gate-envelope-hint">To 猪猪：你的情人节小惊喜</div>
+        <div class="gate-envelope gate-envelope-emphasize" id="gate-envelope" role="button" tabindex="0" aria-label="打开信封">
+          <div class="gate-envelope-body">
+            <div class="gate-envelope-pocket"></div>
+            <div class="gate-envelope-flap">
+              <div class="gate-envelope-seal">开</div>
+            </div>
+            <div class="gate-envelope-letter">
+              <h2>To 猪猪</h2>
+              <img class="rose-letter-photo" src="./assets/13415607759685320.jpeg" alt="我们" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rose-stage" aria-hidden="true">
+      <canvas id="c" aria-label="玫瑰"></canvas>
+    </div>
+
+    <script>
+      const gate = document.getElementById('gate')
+      const passLayer = document.getElementById('gate-pass-layer')
+      const envelopeLayer = document.getElementById('gate-envelope-layer')
+      const envelope = document.getElementById('gate-envelope')
+      const typingTarget = document.getElementById('gate-pass-text')
+      const stage = document.getElementById('rose-stage')
+
+      const introText =
+        '猪猪，情人节快乐。\n\n' +
+        '谢谢你这一年的陪伴：有你在的日子，普通也会变得很甜。\n' +
+        '这一年我们一起走过很多小片段，它们拼起来，就是我最喜欢的“我们”。\n\n' +
+        '希望以后也继续牵着手，过好多好多、数不清的情人节。\n' +
+        '把喜欢写进日常，把浪漫留在每一个今天。\n\n' +
+        '打开信封，别眨眼——小惊喜要来啦。'
+
+      let typingIndex = 0
+      let typingTimer = null
+      let typingDone = false
+      let enteringRose = false
+      let roseStarted = false
+
+      function showEnvelopeStage() {
+        gate.classList.add('gate-fade-out')
+        setTimeout(() => {
+          gate.classList.remove('gate-fade-out')
+          gate.classList.remove('gate-stage-pass')
+          gate.classList.add('gate-stage-envelope')
+          passLayer.hidden = true
+          envelopeLayer.hidden = false
+        }, 420)
+      }
+
+      function startTyping(text, baseDelay = 74) {
+        typingIndex = 0
+        typingDone = false
+        typingTarget.textContent = ''
+
+        function tick() {
+          typingIndex += 1
+          typingTarget.textContent = text.slice(0, typingIndex)
+          if (typingIndex < text.length) {
+            const ch = text.charAt(typingIndex)
+            let delay = baseDelay
+            if (ch === '\n') delay = 520
+            else if ('，。！？；：,.!?;:'.includes(ch)) delay = baseDelay + 240
+            else if ('、'.includes(ch)) delay = baseDelay + 180
+            typingTimer = setTimeout(tick, delay)
+          } else {
+            typingDone = true
+            typingTimer = null
+            setTimeout(() => {
+              showEnvelopeStage()
+            }, 3200)
+          }
+        }
+
+        typingTimer = setTimeout(tick, 420)
+      }
+
+      function showRose() {
+        if (enteringRose) return
+        enteringRose = true
+        gate.classList.add('gate-fade-out')
+        setTimeout(() => {
+          gate.classList.remove('gate-visible')
+          gate.classList.add('gate-hidden')
+          stage.classList.add('rose-stage-visible')
+          stage.setAttribute('aria-hidden', 'false')
+          if (!roseStarted) {
+            roseStarted = true
+            startRose()
+          }
+        }, 420)
+      }
+
+      passLayer.addEventListener('click', () => {
+        if (typingDone) return
+        typingDone = true
+        if (typingTimer) {
+          clearTimeout(typingTimer)
+          typingTimer = null
+        }
+        typingTarget.textContent = introText
+        showEnvelopeStage()
+      })
+
+      envelope.addEventListener('click', () => {
+        showRose()
+      })
+
+      envelope.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter' || ev.key === ' ') {
+          ev.preventDefault()
+          showRose()
+        }
+      })
+
+      startTyping(introText)
+
+      function startRose() {
+        const canvas = document.getElementById('c')
+        const context = canvas.getContext('2d')
+
+        const zBuffer = []
+        const SIZE = 777
+        canvas.width = SIZE
+        canvas.height = SIZE
+        const h = -350
+
+        function surface(a, b, c) {
+          if (c > 60) {
+            return {
+              x: Math.sin(a * 7) * (13 + 5 / (0.2 + Math.pow(b * 4, 4))) - Math.sin(b) * 50,
+              y: b * SIZE + 50,
+              z: 625 + Math.cos(a * 7) * (13 + 5 / (0.2 + Math.pow(b * 4, 4))) + b * 400,
+              r: a * 1 - b / 2,
+              g: a,
+            }
+          }
+          const A = a * 2 - 1
+          const B = b * 2 - 1
+
+          if (A * A + B * B < 1) {
+            if (c > 37) {
+              const j = c & 1
+              const n = j ? 6 : 4
+              const o = 0.5 / (a + 0.01) + Math.cos(b * 125) * 3 - a * 300
+              const w = b * h
+              return {
+                x: o * Math.cos(n) + w * Math.sin(n) + j * 610 - 390,
+                y: o * Math.sin(n) - w * Math.cos(n) + 550 - j * 350,
+                z: 1180 + Math.cos(B + A) * 99 - j * 300,
+                r:
+                  0.4 -
+                  a * 0.1 +
+                  Math.pow(1 - B * B, -h * 6) * 0.15 -
+                  a * b * 0.4 +
+                  Math.cos(a + b) / 5 +
+                  Math.pow(Math.cos((o * (a + 1) + (B > 0 ? w : -w)) / 25), 30) * 0.1 * (1 - B * B),
+                g: o / 1e3 + 0.7 - o * w * 3e-6,
+              }
+            }
+            if (c > 32) {
+              c = c * 1.16 - 0.15
+              const o = a * 45 - 20
+              const w = b * b * h
+              const z = o * Math.sin(c) + w * Math.cos(c) + 620
+              return {
+                x: o * Math.cos(c) - w * Math.sin(c),
+                y: 28 + Math.cos(B * 0.5) * 99 - b * b * b * 60 - z / 2 - h,
+                z,
+                r: (b * b * 0.3 + Math.pow(1 - A * A, 7) * 0.15 + 0.3) * b,
+                g: b * 0.7,
+              }
+            }
+
+            const o = A * (2 - b) * (80 - c * 2)
+            const w =
+              99 -
+              Math.cos(A) * 120 -
+              Math.cos(b) * (-h - c * 4.9) +
+              Math.cos(Math.pow(1 - b, 7)) * 50 +
+              c * 2
+            const z = o * Math.sin(c) + w * Math.cos(c) + 700
+            return {
+              x: o * Math.cos(c) - w * Math.sin(c),
+              y: B * 99 - Math.cos(Math.pow(b, 7)) * 50 - c / 3 - z / 1.35 + 450,
+              z,
+              r: (1 - b / 1.2) * 0.9 + a * 0.1,
+              g: Math.pow(1 - b, 20) / 4 + 0.05,
+            }
+          }
+        }
+
+        setInterval(() => {
+          for (let i = 0; i < 10000; i++) {
+            const part = i % 46
+            const c = part / 0.74
+            const point = surface(Math.random(), Math.random(), c)
+            if (!point) continue
+            const z = point.z
+            const x = parseInt((point.x * SIZE) / z - h)
+            const y = parseInt((point.y * SIZE) / z - h)
+
+            const zBufferIndex = y * SIZE + x
+            if (typeof zBuffer[zBufferIndex] === 'undefined' || zBuffer[zBufferIndex] > z) {
+              zBuffer[zBufferIndex] = z
+              const r = -parseInt(point.r * h)
+              const g = -parseInt(point.g * h)
+              const b = -parseInt(point.r * point.r * -80)
+              context.fillStyle = `rgb(${r},${g},${b})`
+              context.fillRect(x, y, 1, 1)
+            }
+          }
+        }, 0)
+      }
+    </script>
+  </body>
+</html>
