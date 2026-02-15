@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>记忆浮光</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        overflow: auto;
+      }
+
+      #photo-root {
+        min-height: 100vh;
+        padding: 26px 16px 42px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+      }
+
+      .photo-shell {
+        width: min(980px, 100%);
+      }
+
+      .photo-hero {
+        padding: 22px 18px 18px;
+        border-radius: 20px;
+        background:
+          radial-gradient(880px 540px at 20% 10%, rgba(244, 63, 94, 0.18) 0%, rgba(244, 63, 94, 0) 62%),
+          radial-gradient(900px 600px at 85% 30%, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0) 62%),
+          rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        box-shadow: 0 18px 60px rgba(2, 6, 23, 0.48);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .photo-title {
+        margin: 0;
+        font-size: 22px;
+        letter-spacing: 0.02em;
+      }
+
+      .photo-subtitle {
+        margin: 8px 0 0;
+        font-size: 14px;
+        color: rgba(226, 232, 240, 0.88);
+        line-height: 1.6;
+      }
+
+      .photo-timeline {
+        position: relative;
+        margin-top: 22px;
+        padding: 20px 0 0 28px;
+      }
+
+      .photo-timeline::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        bottom: 10px;
+        width: 2px;
+        background: linear-gradient(
+          180deg,
+          rgba(244, 63, 94, 0) 0%,
+          rgba(244, 63, 94, 0.55) 18%,
+          rgba(59, 130, 246, 0.5) 55%,
+          rgba(59, 130, 246, 0) 100%
+        );
+        filter: drop-shadow(0 0 18px rgba(244, 63, 94, 0.18));
+      }
+
+      .photo-card {
+        position: relative;
+        border-radius: 22px;
+        padding: 16px 16px 14px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        box-shadow: 0 20px 70px rgba(2, 6, 23, 0.52);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 14px 16px;
+        align-items: start;
+        transform: translateY(18px);
+        opacity: 0;
+        animation: photo-reveal 720ms cubic-bezier(0.19, 1, 0.22, 1) both;
+      }
+
+      .photo-card + .photo-card {
+        margin-top: 34px;
+      }
+
+      .photo-card:nth-child(1) {
+        animation-delay: 120ms;
+      }
+
+      .photo-card:nth-child(2) {
+        animation-delay: 260ms;
+      }
+
+      .photo-card::before {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        border-radius: 22px;
+        background: radial-gradient(640px 420px at 30% 10%, rgba(244, 63, 94, 0.14) 0%, rgba(244, 63, 94, 0) 66%);
+        pointer-events: none;
+      }
+
+      .photo-card.year-2026::before {
+        background: radial-gradient(700px 460px at 26% 14%, rgba(244, 63, 94, 0.16) 0%, rgba(244, 63, 94, 0) 66%);
+      }
+
+      .photo-card.year-2025::before {
+        background: radial-gradient(700px 460px at 74% 14%, rgba(59, 130, 246, 0.14) 0%, rgba(59, 130, 246, 0) 66%);
+      }
+
+      .photo-dot {
+        position: absolute;
+        left: -28px;
+        top: 22px;
+        width: 18px;
+        height: 18px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.10);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 10px 24px rgba(2, 6, 23, 0.6);
+        display: grid;
+        place-items: center;
+      }
+
+      .photo-dot::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(244, 63, 94, 0.9), rgba(251, 146, 60, 0.8));
+      }
+
+      .year-2025 .photo-dot::after {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.85), rgba(244, 114, 182, 0.75));
+      }
+
+      .photo-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .photo-year {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 8px;
+      }
+
+      .photo-year strong {
+        font-size: 34px;
+        letter-spacing: 0.02em;
+        background: linear-gradient(135deg, rgba(251, 191, 36, 0.95), rgba(244, 63, 94, 0.92));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .year-2025 .photo-year strong {
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.95), rgba(244, 114, 182, 0.9));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .photo-badge {
+        height: 26px;
+        padding: 0 10px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        background: rgba(244, 63, 94, 0.12);
+        border: 1px solid rgba(244, 63, 94, 0.22);
+        color: rgba(255, 228, 230, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .year-2025 .photo-badge {
+        background: rgba(59, 130, 246, 0.12);
+        border: 1px solid rgba(59, 130, 246, 0.22);
+        color: rgba(219, 234, 254, 0.92);
+      }
+
+      .photo-caption {
+        margin: 0;
+        font-size: 14px;
+        color: rgba(226, 232, 240, 0.9);
+        line-height: 1.65;
+      }
+
+      .photo-polaroid {
+        position: relative;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 18px;
+        padding: 10px 10px 18px;
+        box-shadow: 0 26px 70px rgba(2, 6, 23, 0.62);
+        transform: rotate(-2.2deg);
+        transform-origin: 56% 84%;
+        transition: transform 220ms ease, box-shadow 220ms ease;
+      }
+
+      .year-2025 .photo-polaroid {
+        transform: rotate(2.4deg);
+      }
+
+      .photo-polaroid img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border-radius: 14px;
+      }
+
+      .photo-polaroid figcaption {
+        margin-top: 10px;
+        font-size: 13px;
+        color: rgba(24, 24, 27, 0.84);
+        letter-spacing: 0.02em;
+      }
+
+      .photo-card:hover .photo-polaroid {
+        transform: translateY(-2px) rotate(-1deg) scale(1.01);
+        box-shadow: 0 34px 84px rgba(2, 6, 23, 0.68);
+      }
+
+      .year-2025.photo-card:hover .photo-polaroid {
+        transform: translateY(-2px) rotate(1.4deg) scale(1.01);
+      }
+
+      .photo-card:hover {
+        box-shadow: 0 26px 84px rgba(2, 6, 23, 0.62);
+        transform: translateY(12px);
+      }
+
+      .photo-footer {
+        margin-top: 18px;
+        font-size: 12px;
+        color: rgba(226, 232, 240, 0.72);
+        text-align: center;
+      }
+
+      @keyframes photo-reveal {
+        0% {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 760px) {
+        .photo-card {
+          grid-template-columns: 1fr;
+        }
+
+        .photo-polaroid {
+          transform: rotate(-1.3deg);
+        }
+
+        .year-2025 .photo-polaroid {
+          transform: rotate(1.5deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .photo-card {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+
+        .photo-card:hover,
+        .photo-card:hover .photo-polaroid,
+        .year-2025.photo-card:hover .photo-polaroid {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main id="photo-root">
+      <div class="photo-shell">
+        <section class="photo-hero" aria-label="记忆浮光">
+          <h1 class="photo-title">记忆浮光</h1>
+          <p class="photo-subtitle">我多希望，生活永远就是这个模样</p>
+
+          <div class="photo-timeline">
+            <article class="photo-card year-2026">
+              <div class="photo-dot" aria-hidden="true"></div>
+              <div class="photo-meta">
+                <div class="photo-year">
+                  <strong>2026</strong>
+                  <span class="photo-badge">Winter</span>
+                </div>
+                <p class="photo-caption">雪落在围巾上，也落在我们的肩头。那一刻很冷，但你在就很暖。</p>
+              </div>
+              <figure class="photo-polaroid">
+                <img src="./assets/13415607759685320.jpeg" alt="2026 年的我们" loading="lazy" />
+                <figcaption>2026 · 雪天合影</figcaption>
+              </figure>
+            </article>
+
+            <article class="photo-card year-2025">
+              <div class="photo-dot" aria-hidden="true"></div>
+              <div class="photo-meta">
+                <div class="photo-year">
+                  <strong>2025</strong>
+                  <span class="photo-badge">New Year</span>
+                </div>
+                <p class="photo-caption">红色是喜庆，也是心跳。新的一年，继续把好运和喜欢都放进日常。</p>
+              </div>
+              <figure class="photo-polaroid">
+                <img src="./assets/13415613477197740.jpeg" alt="2025 年的我们" loading="lazy" />
+                <figcaption>2025 · 新年快乐</figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="photo-footer">2025–2026 · 这面墙会慢慢变满</div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
