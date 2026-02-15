@@ -1,14 +1,15 @@
 name: Deploy to GitHub Pages
 on:
   push:
-    branches: ["main", "fireworks-2026"]
+    branches: ["main"]
+  workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,7 +18,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: fireworks-2026
+          path: .
   deploy:
     environment:
       name: github-pages
